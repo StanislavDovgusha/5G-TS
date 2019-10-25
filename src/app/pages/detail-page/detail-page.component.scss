@@ -1,0 +1,32 @@
+.detail__wrapper {
+  height: 100% !important;
+}
+
+.detail__hero-text {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.detail__users {
+  height: 100% !important;
+  overflow: auto;
+}
+
+.detail__image {
+  max-width: 300px;
+  max-height: 300px;
+  box-shadow: 1px 1px 5px var(--gray);
+}
+
+.detail__contacts-text {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 110px;
+  padding-bottom: 2px;
+  line-height: normal;
+}
+
+.detail__info-item {
+  width: 50px;
+}

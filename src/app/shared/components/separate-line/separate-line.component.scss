@@ -1,0 +1,42 @@
+.separate {
+  font-size: 1em;
+  color: var(--gray);
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.separate span {
+  display: inline-flex;
+  position: relative;
+  z-index: 1;
+  padding: 0px 0.5em;
+  justify-content: center;
+}
+.separate span::after {
+  content: "";
+  display: block;
+  padding: 0em 0.5em;
+  background-color: var(--white);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.separate::before,
+.separate::after {
+  top: 50%;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 45%;
+  height: 2px;
+  background-color: var(--gray);
+  // vertical-align: middle;
+}
+
+.separate::after {
+  margin-left: 55%;
+}

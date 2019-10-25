@@ -1,0 +1,38 @@
+.table__wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav-link {
+  padding: 0px !important;
+}
+
+.table__fix-head {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.table__fix-head thead th {
+  position: sticky;
+  top: 0;
+}
+
+.table__fix-head {
+  border-left: 0;
+  border-right: 0;
+}
+
+.table__fix-head {
+  table {
+    margin: 0px !important;
+  }
+}
+
+.table__fix-head th,
+td {
+  border: 1px solid #000;
+  border-top: 0;
+}
+.table__fix-head thead th {
+  box-shadow: 1px 1px 0 #000;
+}

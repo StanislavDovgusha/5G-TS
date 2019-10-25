@@ -1,0 +1,44 @@
+<div class="container detail__wrapper pt-3 pb-2 ">
+  <div *ngIf="user" class="row detail__users square scrollbar-dusty-gray square thin d-flex flex-row p3">
+    <!-- USER INFO  -->
+    <!-- <div class="card col-sm-12  d-flex flex-row "> -->
+    <div class="d-flex align-items-start justify-content-center col-xl-4 col-lg-4 col-md-4 col-sm-12">
+      <img src="{{user.avatarUrl}}" class="detail__image card-img-top" alt="avatar not found">
+    </div>
+    <div
+      class="card-body d-flex flex-column align-items-center justify-content-start col-xl-8 col-lg-8 col-md-8 col-sm-12 p2">
+      <div class="detail__hero-text">
+        <h3 class="h3-responsive text-capitalize ">{{ user.login }} {{user.name ? '/':null }} {{user.name}}</h3>
+        <p class="font-weight-light" *ngIf="user.bio">
+          <small>{{user.bio}}</small>
+        </p>
+      </div>
+      <div class="font-weight-normal align-items-center justify-content-center pt-2" *ngIf="user.roleType">
+        <label class="detail__info-item">Role</label><span>{{user.roleType}}</span>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- END INFO -->
+    <!-- START CONTACTS -->
+    <div class="d-block pt2 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <app-separate-line message="Contacts"></app-separate-line>
+      <div class="detail__contacts">
+        <a *ngIf="user.email" class="nav-link">
+          <i class="fab fa-email"></i>
+          <span class="d-inline-block ml-1">{{user.email}}</span>
+        </a>
+        <a [href]="user.profileUrl" class="nav-link">
+          <i class="fab fa-github"></i>
+          <span class="d-inline-block ml-1">Link</span>
+        </a>
+        <div>
+        </div>
+        <!-- END CONTACTS -->
+      </div>
+      <div *ngIf="infoMessage" class="row">
+        <h2 class="detail__contacts-text"></h2>
+        <app-info [message]="infoMessage"></app-info>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.blocks__users {
+  overflow: auto;
+  height: 100%;
+}
+
+.blocks__wrapper {
+  height: 100%;
+}
+
+.blocks__users {
+  position: relative;
+}
+
+.blocks__user-item.shake:hover {
+  animation: shake-item 0.05s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake-item {
+  0% {
+    transform: skewZ(-2deg);
+    transform: skewY(-2deg);
+  }
+  100% {
+    transform: skewZ(2deg);
+    transform: skewY(2deg);
+  }
+}

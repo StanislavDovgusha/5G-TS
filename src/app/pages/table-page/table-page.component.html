@@ -1,0 +1,31 @@
+<div class="table__wrapper view-wrapper d-flex  flex-column">
+  <div class="toolbar">
+    <app-search class="flex-fill" (onSearch)="search($event)"></app-search>
+  </div>
+  <div class="table__fix-head flex-fill table-responsive  square scrollbar-dusty-gray square thin">
+    <table appScrollbar class="table table-striped table-bordered table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" style="width: 10%;">#</th>
+          <th scope="col">Login</th>
+          <th scope="col" style="width: 15%;">Score</th>
+          <th scope="col" style="width: 15%;">Role</th>
+          <th scope="col" style="width: 15%;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i=index; trackBy:trackRow; ">
+          <th>{{  i+1 }}</th>
+          <td class="text-capitalize">{{user.login}}</td>
+          <td class="text-right text-capitalize">{{user.score}}</td>
+          <td class="text-center text-capitalize">{{user.roleType}}</td>
+          <td class="text-center text-capitalize">
+            <a href="#" [routerLink]="['/detail/', user.id]" class="nav-link">see details...</a>
+          </td>
+        </tr>
+        <app-spinner *ngIf="loading"></app-spinner>
+        <app-info *ngIf="infoMessage" [message]="infoMessage"></app-info>
+      </tbody>
+    </table>
+  </div>
+</div>

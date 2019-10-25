@@ -1,0 +1,21 @@
+.user-item__wrapper {
+  box-shadow: 1px 1px 5px var(--gray);
+  padding: 2px;
+}
+
+.user-item__avatar {
+  height: 70px;
+  width: 50px;
+}
+
+.user-item__info {
+  font-size: 0.8rem;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.card__text-see-details {
+  pointer-events: none;
+}
