@@ -1,8 +1,7 @@
 <div class="container detail__wrapper pt-3 pb-2 ">
   <div *ngIf="user" class="row detail__users square scrollbar-dusty-gray square thin d-flex flex-row p3">
     <!-- USER INFO  -->
-    <!-- <div class="card col-sm-12  d-flex flex-row "> -->
-    <div class="d-flex align-items-start justify-content-center col-xl-4 col-lg-4 col-md-4 col-sm-12">
+    <div class="d-flex align-items-start justify-content-center col-xl-4 col-md-4 col-sm-12">
       <img src="{{user.avatarUrl}}" class="detail__image card-img-top" alt="avatar not found">
     </div>
     <div
@@ -17,7 +16,6 @@
         <label class="detail__info-item">Role</label><span>{{user.roleType}}</span>
       </div>
     </div>
-    <!-- </div> -->
     <!-- END INFO -->
     <!-- START CONTACTS -->
     <div class="d-block pt2 col-xl-12 col-lg-12 col-md-12 col-sm-12">

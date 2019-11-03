@@ -3,8 +3,8 @@
     <app-search class="flex-fill" (onSearch)="search($event)"></app-search>
   </div>
   <div class="container row blocks__users d-flex  square scrollbar-dusty-gray square thin ">
-    <div class="row blocks__items">
-      <app-user-item class="col-xl-3 col-lg-4 col-md-6 col-sm-12 blocks__user-item shake flex-grow-1 mb-1 mt-1" *ngFor="let user of users;trackBy:trackUser;" [user]="user"></app-user-item>
+    <div class="row blocks__users-items">
+      <app-user-item class="col-xl-3 col-md-6 col-sm-12 flex-grow-1 mb-1 mt-1  blocks__user-item shake" *ngFor="let user of users;trackBy:trackUser;" [user]="user"></app-user-item>
       <app-spinner *ngIf="loading" ></app-spinner>
       <app-info *ngIf="infoMessage" [message]="infoMessage"></app-info>
     </div>
