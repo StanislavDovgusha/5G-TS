@@ -31,9 +31,10 @@ export class SearchComponent implements OnInit, AfterViewInit, OnDestroy {
 
   search(event: Event) {
     event.preventDefault();
-    const value = this.prepareValue(this.elementInput.nativeElement.target.value);
+    const element = this.elementInput.nativeElement;
+    const value = this.prepareValue(element.value);
     this.notifyOnSearch(value);
-    this.elementInput.nativeElement.target.value = '';
+    element.value = '';
   }
 
   // ======================== Helpers ========================
